@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+
+<script>
+
+//função para pular linha
+function pulaLinha(){
+	
+	document.write("<br><br>");
+
+}
+
+//função para mostrar frase na tela e pular linha em seguida
+function mostra(frase){
+	
+	document.write(frase);
+	pulaLinha();
+}
+
+var idade = parseInt(prompt("Quantos anos vc tem? "));
+var carteira = prompt("Possui CNH? S ou N ");
+
+
+
+
+
+
+if(idade >= 18 && carteira == "s"){
+
+	mostra("Você já pode dirigir!");
+
+}else{
+
+	mostra("Você não pode dirigir.");
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,83 @@
+<meta charset='UTF-8'>
+
+<input/>
+<button> Compare aqui </button>
+
+<script>
+
+	function sorteia(){
+
+		return Math.round(Math.random() * 10);
+	}
+
+
+	function sorteiaNumeros(quantidade){
+
+		var resultados = [];
+
+		var contador = 1;
+
+		while(contador <= quantidade){
+
+			var numeroAleatorio = sorteia();
+
+			var numeroLista = false;
+
+			if(numeroAleatorio !== 0){
+
+				for(var posicao = 0; posicao < resultados.length; posicao++){
+
+					if(resultados[posicao] == numeroAleatorio){
+						numeroLista = true;
+						break
+					}
+				}
+
+				if(numeroLista == false){
+					resultados.push(numeroAleatorio);
+					contador++;
+				}
+			}
+		}
+
+		return resultados;
+	}
+
+	//var resultado = Math.round(Math.random() * 10);
+	var resultados = sorteiaNumeros(5);
+	console.log(resultados);
+
+	var input = document.querySelector("input");
+	input.focus();
+
+	function verifica(){
+
+	var acertou = false;
+
+	for(var posicao = 0; posicao < resultados.length; posicao++) {
+			
+		if(input.value == resultados[posicao]){
+			
+			alert("Acertou Mizeravi");
+			acertou = true;
+			break;
+
+			}
+		}
+
+	if(acertou == false){
+		alert("Você ERROU!");
+		}
+		
+	input.value = "";
+	input.focus();
+	}
+
+	var button = document.querySelector("button");
+
+	button.onclick = verifica;
+	
+
+
+
+</script>

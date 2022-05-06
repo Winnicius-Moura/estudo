@@ -1,0 +1,58 @@
+<meta charset="UTF-8">
+<script>
+//função para pular linha
+function pulaLinha(){
+	
+	document.write("<br><br>");
+
+}
+//função para imprimir na tela
+function mostra(frase){
+	document.write(frase);
+	pulaLinha();
+
+}
+
+var vitorias = parseInt(prompt("Número de vitórias: "));
+var empates = parseInt(prompt("Número de empates: "));
+
+var pontos = vitorias * 3 + empates;
+
+mostra("Os pontos do seu time são: " + pontos);
+
+if (pontos > 28){
+
+	mostra("O seu time está melhor");
+
+}
+
+if (pontos < 28){
+	
+	mostra("O seu time está pior");
+
+}
+
+if(pontos = 10){
+
+	mostra("O seu time está igual");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

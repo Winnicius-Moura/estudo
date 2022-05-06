@@ -1,0 +1,67 @@
+<meta charset="UTF-8">
+<script>
+
+
+
+
+var usuarioCadastrado = "winnicius";
+var senhaCadastrada = "mudar123";
+
+var tentativa = 0;
+var maximo = 3;
+while (tentativa <= maximo){
+
+	var usuarioInformado = prompt("Informe seu usuário: ");
+	var senhaInformada = prompt("Informe sua senha: ");
+
+
+	if(usuarioCadastrado == usuarioInformado && senhaCadastrada == senhaInformada){
+
+		alert("Seja bem vindo, " + usuarioInformado);
+		tentativa = maximo;
+	}
+	else{
+
+		if(tentativa == 3){
+
+			alert("Número de tentativas esgotado!");
+
+		}
+		else{
+
+			alert("Login Inválido tente novamente");
+		}
+	}
+
+	tentativa = tentativa + 1
+
+}
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

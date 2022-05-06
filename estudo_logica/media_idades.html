@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha(){
+	
+	document.write("<br><br>");
+}
+
+function mostra(frase){
+	
+	document.write(frase);
+	pulaLinha();
+}
+
+var totalPessoas = parseInt(prompt("Digite o total de pessoas: "));
+var totalIdades = 0;
+var contador = 1;
+
+while(contador <= totalPessoas){
+
+	var idade = parseInt(prompt("Digite a idade da pessoa: "));
+	totalIdades = totalIdades + idade;
+	contador++;
+
+}    
+
+var mediaTotal = totalIdades / totalPessoas;
+mostra("A média de idade das pessoas é: " + Math.round(mediaTotal));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

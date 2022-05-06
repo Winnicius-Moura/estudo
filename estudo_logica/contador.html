@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+
+<script>
+//função para pular linha
+function pulaLinha(){
+	
+	document.write("<br><br>");
+
+}
+//função para imprimir na tela
+function mostra(frase){
+	document.write(frase);
+	pulaLinha();
+
+}
+
+//função para sorteio
+function sorteia(numero){
+
+	return Math.round(Math.random() * numero);
+}
+
+
+var limite = parseInt(prompt("Data limite: "))
+var anoCopa = 1930;
+
+while(anoCopa <= limite){
+
+	mostra("Teve copa em " + anoCopa);
+	anoCopa = anoCopa + 4;
+}
+
+mostra("cabou");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

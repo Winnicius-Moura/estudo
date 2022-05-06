@@ -1,0 +1,65 @@
+<meta charset="UTF-8">
+
+<script>
+//função para pular linha
+function pulaLinha(){
+	
+	document.write("<br><br>");
+
+}
+//função para imprimir na tela
+function mostra(frase){
+	document.write(frase);
+	pulaLinha();
+
+}
+
+//função para sorteio
+function sorteia(numero){
+
+	return Math.round(Math.random() * numero);
+}
+
+
+
+var numeroPensado = sorteia(3);
+
+var tentativa = 1;
+
+while(tentativa <= 3){
+
+	var chute = parseInt(prompt("Diga um número de 0 a 10: "));
+	
+	if (chute == numeroPensado){
+
+		mostra("Acertou mizeravi, o número era: " + numeroPensado);
+		break;
+
+	} else {
+
+		mostra("Errou");
+	}
+	tentativa++;
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

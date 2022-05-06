@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<h1> Calculadora de idade </h1>
+<script>
+
+	function pulaLinha(){
+		document.write("<br><br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+
+	var minhaIdade = 28;
+	var outraIdade = 65;
+
+	mostra("Nossa diferença de idade é: " + (minhaIdade - outraIdade));
+
+	var anoAtual = 2022;
+	var anoInicio = 1500;
+	var idadeFilhos = 28;	
+
+	var resultado = (anoAtual - anoInicio)/idadeFilhos;
+
+	mostra("Quantos anos se passaram des da chegada dos portugueses no brasil: " + (anoInicio - anoAtual) + " anos");
+	mostra("Quantas gerações se passaram: " + (Math.round(resultado)) + " gerações");
+
+</script>
