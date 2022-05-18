@@ -1,0 +1,307 @@
+/* GENERAL CONFIGS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root{
+    --hue:190;
+    --size: 15rem;
+    --primary-color:hsl(var(--hue), 41%, 90%);
+    font-size: 62.5%;
+    --nav-height: 7.2rem;
+    --background-color:hsl(34, 41%, 90%);
+    --paragraph:hsl(210,11%,15%);
+    --card-color: #f5f5f5;
+}
+
+section{
+    padding-block: 10rem;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    text-align: center;
+    font-size: 1.6rem;
+
+    transition: .5s;
+
+    /* overflow: overlay; */
+
+    background: var(--background-color);
+}
+
+.wrapper{
+    width: min(112rem, 100%);
+    margin-inline: auto;
+    padding-inline: 2.4rem;
+}
+
+/* --------------------- */
+
+/* Darkmode */
+
+.switch {
+
+ font-size: 17px;
+ position: relative;
+ display: inline-block;
+ width: 3.5em;
+ height: 2em;
+}
+
+
+.switch input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+
+.slide {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #f4f4f5;
+ transition: .4s;
+ border-radius: 30px;
+}
+
+.slide:before {
+ position: absolute;
+ content: "";
+ height: 1.4em;
+ width: 1.4em;
+ border-radius: 20px;
+ left: 0.3em;
+ bottom: 0.3em;
+ background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+ ;
+ transition: .4s;
+}
+
+input:checked + .slide {
+ background-color: #303136;
+}
+
+input:checked + .slide:before {
+ transform: translateX(1.5em);
+ background: #303136;
+ box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -5px 0 0 #a3dafb;
+}
+/* ------------------ */
+
+/* NAV Bar */
+nav{
+    display: flex;
+    height: var(--nav-height);
+    /* background-color: hsl(34, 61%, 90%); */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    /* z-index: 100; */
+    width: 100vw;
+
+}
+nav .logo svg{
+    width: 6rem;
+    display: flex;
+}
+
+nav svg path,polygon{
+    fill: var(--paragraph);
+}
+
+nav .wrapper{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+nav .menu{
+    width: 100%;
+    display: flex;
+    gap: 3.2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .menu ul:nth-child(1){
+    display: flex;
+    gap: 4.8rem;
+    margin: auto;
+    
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+    
+}
+
+nav .menu ul li a{
+    text-decoration: none;
+    color: var(--paragraph);
+}
+
+/* ----------------------- */
+
+/* CARD section */
+img {
+    border-radius: 50%;
+    width: var(--size);
+    height: var(--size);
+}
+.card{
+    width: calc(19rem + var(--size));
+    height: calc(25.4rem + var(--size));
+    background: var(--card-color);
+    padding: 6rem 1.5rem;
+    transition: box-shadow .3s ease, transform .2s ease;
+    margin-inline: auto;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .2s ease, opacity .2s ease;
+    
+}
+
+.card-avatar{
+    width: --size;
+    transition: transform .2s ease;
+    margin-bottom: 1rem;
+    margin-inline: auto;
+}
+
+.card-social{
+    transform: translateY(200%);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    opacity: 0;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.card-social_item{
+    list-style: none;
+}
+
+
+.card-social_item svg{
+    display: block;
+    height: 2.8rem;
+    width: 2.8rem;
+    fill: skyblue;
+    cursor: pointer;
+    transition: fill 0.2 ease, transform 0.2 ease;
+}
+
+.card-title{
+    color: var(--paragraph);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.card-subtitle{
+    color: #859ba8;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.card:hover{
+    box-shadow: 0 8px 50px var(--paragraph);
+}
+
+.card:hover .card-info{
+    transform: translateY(-5%);
+}
+
+.card:hover .card-social{
+    transform: translateY(100%);
+    opacity: 1;
+}
+
+.card-social_item svg:hover{
+    fill: var(--paragraph);
+    transform: scale(1.1);
+}
+
+
+.card-avatar:hover{
+    transform: scale(1.1);
+}
+
+/* ------------------------- */
+
+/* BLOCO DE INFORMAÇÕES */
+.accordion{
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 1.8rem;
+    width: 50%;
+    text-align: left;
+    border: none;
+    outline: none;
+}
+
+.active, .accordion:hover{
+    background-color: #ccc;
+}
+
+.panel{
+    padding: 0 1.8rem;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+.accordion::after{
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active::after{
+    content: '\2796';
+}
+
+
+/* ---------------------- */
+
+#chanceTheme{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+body.dark-mode{
+    background: #353535;
+    --paragraph:white;
+    --card-color: #484848; 
+    
+}
